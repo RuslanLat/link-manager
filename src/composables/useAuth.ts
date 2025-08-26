@@ -40,7 +40,7 @@ export function useAuth() {
 
     async function resetPassword(password: string) {
         return await handleRequest<object, AuthError>(async () => {
-            const { data, error } = await supabase.auth.resetPasswordForEmail(password, { redirectTo: 'http://localhost:5173/reset-password' })
+            const { data, error } = await supabase.auth.resetPasswordForEmail(password, { redirectTo: 'https://latif-link-manager.netlify.app/reset-password' })
             if (error) throw error
             return data
         })
