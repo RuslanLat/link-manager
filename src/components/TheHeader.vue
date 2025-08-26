@@ -56,7 +56,7 @@ onMounted(async () => {
 <template>
   <CategoriesModal v-model="categoriesDialogVisible" />
   <CreateLinkModal v-model="createLinkDialogVisible" />
-  <div class="mb-5">
+  <div>
     <Toast />
     <Menubar>
       <template #start>
@@ -70,7 +70,7 @@ onMounted(async () => {
       </template>
       <template #end>
         <div class="flex items-center gap-2">
-          <ToggleSwitch v-model="checked as boolean">
+          <ToggleSwitch v-model="checked">
             <template #handle="{ checked }">
               <i :class="['!text-xs pi', { 'pi-moon': checked, 'pi-sun': !checked }]" />
             </template>

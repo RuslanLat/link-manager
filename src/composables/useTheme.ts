@@ -2,7 +2,7 @@ import { ref, watch } from 'vue'
 
 export function useTheme() {
 
-    const checked = ref<boolean | null>(null)
+    const checked = ref<boolean>(false)
 
     watch(checked, () => {
         // eslint-disable-next-line @typescript-eslint/no-unused-expressions
